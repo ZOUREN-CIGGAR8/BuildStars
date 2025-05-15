@@ -1,410 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildStars</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-            transition: background-color 0.5s;
-            overflow: hidden;
-        }
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            max-height: 80vh; /* Tamaño máximo para la caja de comentarios */
-            overflow-y: auto; /* Permite el scroll vertical */
-            transition: background-color 0.5s, color 0.5s;
-        }
-        .title {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .brawler-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%; /* Ajusta el ancho según sea necesario */
-            margin: 10px auto;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            text-align: left;
-            margin-top: 20px;
-            width: 100%;
-        }
-        .brawler-image {
-            max-width: 50%; /* Ajusta el tamaño máximo de la imagen */
-            height: auto;
-        }
-        .toggle-button {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            width: 100px;
-            height: 50px;
-            background-color: #000;
-            color: #fff;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-        .dark-mode {
-            background-color: #000 !important;
-            color: #fff !important;
-        }
-    </style>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            document.querySelector('.container').classList.toggle('dark-mode');
-        }
-    </script>
+  <meta charset="UTF-8">
+  <title>TECCA UNRELEASED & LEAKS</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 5px;
+      color: #ff44cc;
+      text-shadow: 0 0 10px #ff44cc;
+    }
+
+    p {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 50px;
+    }
+
+    .player {
+      background-color: #111;
+      border: 1px solid #ff44cc55;
+      border-radius: 20px;
+      display: inline-block;
+      padding: 20px;
+      box-shadow: 0 0 20px #ff44cc33;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #ff55cc;
+      margin-bottom: 15px;
+    }
+
+    audio {
+      width: 250px;
+      filter: drop-shadow(0 0 5px #ff44cc88);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="title">Build Stars</div>
-        <div class="brawler-section">
-            <div class="subtitle">Shelly</div>
-            <img src="https://i.imgur.com/GkQvrsd.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Nita</div>
-            <img src="https://imgur.com/hwXYW3b.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Colt</div>
-            <img src="https://imgur.com/MbJHZ1Y.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Bull</div>
-            <img src="https://imgur.com/J4Q3m0b.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Brock</div>
-            <img src="https://imgur.com/m5J7k9s.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">El Primo</div>
-            <img src="https://imgur.com/6a9LSeC.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Barley</div>
-            <img src="https://imgur.com/7VFu16F.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Poco</div>
-            <img src="https://imgur.com/MWjryNw.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Rosa</div>
-            <img src="https://imgur.com/FT9wuAz.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Jessie</div>
-            <img src="https://imgur.com/BltArRD.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Dynamike</div>
-            <img src="https://imgur.com/xtCAVJp.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Tick</div>
-            <img src="https://imgur.com/j6y3GjU.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">8-Bit</div>
-            <img src="https://imgur.com/aMIoYuX.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Rico</div>
-            <img src="https://imgur.com/5FpaiRQ.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Darryl</div>
-            <img src="https://imgur.com/XvOyGqH.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Penny</div>
-            <img src="https://imgur.com/Dyl3dkf.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Carl</div>
-            <img src="https://imgur.com/twLcqKB.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Jacky</div>
-            <img src="https://imgur.com/oQz2NnU.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Gus</div>
-            <img src="https://imgur.com/H2DZB1X.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Bo</div>
-            <img src="https://imgur.com/HhfzyJt.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Emz</div>
-            <img src="https://imgur.com/fHfYeNv.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Stu</div>
-            <img src="https://imgur.com/ClKbiqd.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Piper</div>
-            <img src="https://imgur.com/szbb5Eu.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Pam</div>
-            <img src="https://imgur.com/f47Hr73.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Frank</div>
-            <img src="https://imgur.com/yx2XMyq.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Bibi</div>
-            <img src="https://imgur.com/Gq37m2S.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Bea</div>
-            <img src="https://imgur.com/N9Fg9eU.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Nani</div>
-            <img src="https://imgur.com/acke5cL.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Edgar</div>
-            <img src="https://imgur.com/LFRKxI5.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Griff</div>
-            <img src="https://imgur.com/sT3VMHZ.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Grom</div>
-            <img src="https://imgur.com/XkoFa13.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Bonnie</div>
-            <img src="https://imgur.com/XQ3nlID.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Gale</div>
-            <img src="https://imgur.com/57BRGQn.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Collete</div>
-            <img src="https://imgur.com/dwNm030.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Belle</div>
-            <img src="https://imgur.com/8yffxsi.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Ash</div>
-            <img src="https://imgur.com/KTmfIr8.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Lola</div>
-            <img src="https://imgur.com/DcGHQpP.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Sam</div>
-            <img src="https://imgur.com/Q7ARkRk.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Mandy</div>
-            <img src="https://imgur.com/YWbXRiU.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Maisie</div>
-            <img src="https://imgur.com/3oM8kbK.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Hank</div>
-            <img src="https://imgur.com/e8W4XDU.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Pearl</div>
-            <img src="https://imgur.com/pQIR8tS.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Larry & Lawrie</div>
-            <img src="https://imgur.com/rI8ZhAh.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Angelo</div>
-            <img src="https://imgur.com/JilyLmA.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Berry</div>
-            <img src="https://imgur.com/edPum4D.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Mortis</div>
-            <img src="https://imgur.com/D5MTQ52.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Tara</div>
-            <img src="https://imgur.com/lbGOI3M.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Genio</div>
-            <img src="https://imgur.com/1hcsCJd.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Max</div>
-            <img src="https://imgur.com/J5sCE0A.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Mr.P</div>
-            <img src="https://imgur.com/qo76Sv0.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Sprout</div>
-            <img src="https://imgur.com/HI5SyUe.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Byron</div>
-            <img src="https://imgur.com/JzaajOL.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Squeak</div>
-            <img src="https://imgur.com/wFN2l33.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Lou</div>
-            <img src="https://imgur.com/Bh0yni9.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Ruffs</div>
-            <img src="https://imgur.com/JQMMSaX.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Buzz</div>
-            <img src="https://imgur.com/e6lwbyU.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Fang</div>
-            <img src="https://imgur.com/8gIB4ER.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Eve</div>
-            <img src="https://imgur.com/H5WT7xH.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Janet</div>
-            <img src="https://imgur.com/abagXZx.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Otis</div>
-            <img src="https://imgur.com/GwfVDHe.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Buster</div>
-            <img src="https://imgur.com/fP74mfZ.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Gray</div>
-            <img src="https://imgur.com/lr5xxeH.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">R-T</div>
-            <img src="https://imgur.com/enA3NqC.jpg" alt="Descripción de la imagen" class="brawler-image">
-        </div>
-        <div class="brawler-section">
-            <div class="subtitle">Willow</div>
-            <img src="https://imgur.com/w1TdqQN.jpg" alt="Descripción de la imagen" class="brawler-image">
-            </div>
-            <div class="brawler-section">
-                <div class="subtitle">Doug</div>
-                <img src="https://imgur.com/WSKDYbA.jpg" alt="Descripción de la imagen" class="brawler-image">
-            </div>
-            <div class="brawler-section">
-                <div class="subtitle">Chuck</div>
-                <img src="https://imgur.com/cyEQP36.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Charlie</div>
-                    <img src="https://imgur.com/aq8LQzJ.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Mico</div>
-                    <img src="https://imgur.com/GA4Yk2o.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Melodie</div>
-                    <img src="https://imgur.com/R5NNapC.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Lily</div>
-                    <img src="https://imgur.com/CzTMcJg.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Clancy</div>
-                    <img src="https://imgur.com/qLgyang.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Spike</div>
-                    <img src="https://imgur.com/557OHyx.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Crow</div>
-                    <img src="https://imgur.com/ssohc1B.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Leon</div>
-                    <img src="https://imgur.com/2gsUOvj.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Sandy</div>
-                    <img src="https://imgur.com/5hgIfbS.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Amber</div>
-                    <img src="https://imgur.com/DekbFSn.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Meg</div>
-                    <img src="https://imgur.com/kG9yuLy.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Surge</div>
-                    <img src="https://imgur.com/GVii07M.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Chester</div>
-                    <img src="https://imgur.com/xNdEvbl.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Cordelius</div>
-                    <img src="https://imgur.com/5SwSRYf.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Kit</div>
-                    <img src="https://imgur.com/aPYkTOG.jpg" alt="Descripción de la imagen" class="brawler-image">
-                </div>
-                <div class="brawler-section">
-                    <div class="subtitle">Draco</div>
-                    <img src="https://imgur.com/C03T3vq.jpg" alt="Descripción de la imagen" class="brawler-image">
-                    </div>
-        <div class="toggle-button" onclick="toggleDarkMode()">Black UI</div>
-    </body>
-    </html>
+  <h1>TECCA UNRELEASED & LEAKS</h1>
+  <p>made by CirooChimi on tiktok</p>
+
+  <div class="player">
+    <h2>OWA OWA</h2>
+    <audio controls>
+      <source src="OWA OWA.mp3" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
+  </div>
+</body>
+</html>
+
