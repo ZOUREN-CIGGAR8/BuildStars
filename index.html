@@ -49,6 +49,49 @@
       width: 250px;
       filter: drop-shadow(0 0 5px #ff44cc88);
     }
+
+    .request-box {
+      margin-top: 60px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      border: none;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff44cc;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #admin-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #333;
+      display: none;
+    }
+
+    #request-list {
+      position: fixed;
+      top: 50px;
+      right: 10px;
+      background-color: #111;
+      border: 1px solid #ff44cc55;
+      padding: 15px;
+      border-radius: 15px;
+      display: none;
+      text-align: left;
+      max-height: 300px;
+      overflow-y: auto;
+    }
   </style>
 </head>
 <body>
@@ -59,7 +102,6 @@
     <h2>OWA OWA</h2>
     <audio controls>
       <source src="OWA OWA.mp3" type="audio/mpeg" />
-      Tu navegador no soporta el audio.
     </audio>
   </div>
 
@@ -67,7 +109,6 @@
     <h2>RIGHT NOW</h2>
     <audio controls>
       <source src="LIL_TECCA_-_RIGHT_NOW.mp3" type="audio/mpeg" />
-      Tu navegador no soporta el audio.
     </audio>
   </div>
 
@@ -75,7 +116,6 @@
     <h2>WEAK SIDE</h2>
     <audio controls>
       <source src="WEAK SIDE.mp3" type="audio/mpeg" />
-      Tu navegador no soporta el audio.
     </audio>
   </div>
 
@@ -83,9 +123,49 @@
     <h2>DRIVE THE BOAT</h2>
     <audio controls>
       <source src="DRIVE THE BOAT.mp3" type="audio/mpeg" />
-      Tu navegador no soporta el audio.
     </audio>
   </div>
+
+  <div class="request-box">
+    <h2>Song requests</h2>
+    <input type="text" id="songInput" placeholder="Enter song name..." />
+    <button onclick="submitSong()">Send</button>
+  </div>
+
+  <button id="admin-btn" onclick="toggleRequests()">Song requests</button>
+  <div id="request-list"></div>
+
+  <script>
+    function submitSong() {
+      const input = document.getElementById('songInput');
+      const song = input.value.trim();
+      if (song) {
+        let requests = JSON.parse(localStorage.getItem('songRequests') || '[]');
+        requests.push(song);
+        localStorage.setItem('songRequests', JSON.stringify(requests));
+        input.value = '';
+        alert('Request sent!');
+      }
+    }
+
+    function toggleRequests() {
+      const list = document.getElementById('request-list');
+      if (list.style.display === 'none') {
+        let requests = JSON.parse(localStorage.getItem('songRequests') || '[]');
+        list.innerHTML = '<h3>Requested Songs:</h3><ul>' + 
+                         requests.map(r => `<li>${r}</li>`).join('') + '</ul>';
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
+    }
+
+    // Press "Shift + R" to show the admin button
+    document.addEventListener('keydown', function(e) {
+      if (e.shiftKey && e.key.toLowerCase() === 'r') {
+        document.getElementById('admin-btn').style.display = 'block';
+      }
+    });
+  </script>
 </body>
 </html>
-
